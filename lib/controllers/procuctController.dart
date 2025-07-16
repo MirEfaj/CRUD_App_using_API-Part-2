@@ -65,7 +65,7 @@ class ProductController {
   Future<bool> updateProduct(Data product) async {
     try {
       print("Calling UpdateProduct API...");
-      final response = await http.put(
+      final response = await http.post(
         Uri.parse(URLs.updateProduct(product.sId!)),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8'
